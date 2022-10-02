@@ -18,17 +18,6 @@ app.get('/clientes', (req, res) => {
     });
 });
 
-app.get('/clientes', (req, res) => {
-  connection.query('SELECT * FROM clientes', (error, results, fields) => {
-      if(error) 
-        res.json(error);
-      else
-        res.json(results);
-      connection.end();
-      console.log('executou!');
-  });
-});
-
 
 app.listen(port);
 console.log('API funcionando!');
